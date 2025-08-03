@@ -1,0 +1,84 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+.weather-tools {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.tool-header {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 40px 0 30px;
+    color: #2c3e50;
+    font-size: 2.2rem;
+}
+
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.tool-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 2px solid #4a7ab3;
+}
+
+.tool-card:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-color: #4a7ab3;
+}
+
+.tool-card a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.tool-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+    border: 2px solid #4a7ab3;
+    border-radius: 8px 8px 0 0;
+    box-sizing: border-box;
+}
+
+.tool-info {
+    padding: 15px;
+}
+
+.tool-name {
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+    .tool-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tool-header {
+        font-size: 1.8rem;
+        margin: 30px 0 20px;
+    }
+    
+    .tool-card {
+        margin: 0 10px;
+    }
+}
