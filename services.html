@@ -1,0 +1,139 @@
+{% extends "main/layout.html" %}
+{% load static %}
+
+{% block title %}Сервисы | MeteoVrn{% endblock %}
+
+{% block content %}
+
+<div class="weather-tools">
+        <h1 class="tool-header" style="margin-top: -40px;">
+            Инструменты синоптика
+        </h1>
+        
+        <div class="tool-grid">
+            <!-- Ряд 1 -->
+            <div class="tool-card">
+                <a href="https://meteologix.com" target="_blank">
+                    <img src="{% static 'main/images/toolimgs/meteologix2-round-corners.png' %}" alt="Meteologix">
+                    <div class="tool-info">
+                        <h3 class="tool-name">Meteologix</h3>
+                        <p>Подробные карты погоды и прогнозы</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="tool-card">
+                <a href="https://www.blitzortung.org/en/live_dynamic_maps3.php" target="_blank">
+                    <img src="{% static 'main/images/toolimgs/blitzortung2.png' %}" alt="Blitzortung">
+                    <div class="tool-info">
+                        <h3 class="tool-name">Blitzortung</h3>
+                        <p>Карта молний в реальном времени</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="tool-card">
+                <a href="https://www.estofex.org/" target="_blank">
+                    <img src="{% static 'main/images/toolimgs/estofex2-round-corners.png' %}" alt="Estofex">
+                    <div class="tool-info">
+                        <h3 class="tool-name">ESTOFEX</h3>
+                        <p>Прогнозы экстремальных явлений</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Ряд 2 -->
+            <div class="tool-card">
+                <a href="https://wetterzentrale.de/" target="_blank">
+                    <img src="{% static 'main/images/toolimgs/wetterzentrale2-round-corners.png' %}" alt="Wetterzentrale">
+                    <div class="tool-info">
+                        <h3 class="tool-name">Wetterzentrale</h3>
+                        <p>Архив метеокарт и прогнозов</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="tool-card">
+                <a href="https://meteoinfo.ru/mapsynop" target="_blank">
+                    <img src="{% static 'main/images/toolimgs/meteoinfo2-round-corners.png' %}" alt="Meteoinfo">
+                    <div class="tool-info">
+                        <h3 class="tool-name">Meteoinfo</h3>
+                        <p>Синоптические карты России</p>
+                    </div>
+                </a>
+            </div>
+            <div class="tool-card">
+                <a href="https://method.meteorf.ru/ansambl/ansambl.html" target="_blank">
+                    <img src="{% static 'main/images/toolimgs/gmcmap2-round-corners.png' %}" alt="GMC Map">
+                    <div class="tool-info">
+                        <h3 class="tool-name">Ansambl</h3>
+                        <p>Комплексный прогноз от Гидрометцентра</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Ряд 3 -->
+            <div class="tool-card">
+                <a href="https://www.stormarchive.nl" target="_blank">
+                    <img src="{% static 'main/images/toolimgs/stormarchive2-round-corners.png' %}" alt="Storm Archive">
+                    <div class="tool-info">
+                        <h3 class="tool-name">Storm Archive</h3>
+                        <p>Грозопеленгация и архив опасных явлений</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="tool-card">
+                <a href="https://www.sat24.com/en-gb" target="_blank">
+                    <img src="{% static 'main/images/toolimgs/cloudradar2-round-corners.png' %}" alt="SAT24">
+                    <div class="tool-info">
+                        <h3 class="tool-name">SAT24</h3>
+                        <p>Спутниковые снимки облачности</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="tool-card">
+                <a href="https://www.ventusky.com" target="_blank">
+                    <img src="{% static 'main/images/toolimgs/ventusky2-round-corners.png' %}" alt="Ventusky">
+                    <div class="tool-info">
+                        <h3 class="tool-name">Ventusky</h3>
+                        <p>Визуализация погодных данных</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Ряд 4 -->
+            <div class="tool-card">
+                <a href="https://www.windy.com/" target="_blank">
+                    <img src="{% static 'main/images/toolimgs/windy2-round-corners.png' %}" alt="Windy">
+                    <div class="tool-info">
+                        <h3 class="tool-name">Windy</h3>
+                        <p>Интерактивные погодные карты</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="tool-card">
+                <a href="https://rainradar.ru/" target="_blank">
+                    <img src="{% static 'main/images/toolimgs/rainradar2-round-corners.png' %}" alt="Rain Radar">
+                    <div class="tool-info">
+                        <h3 class="tool-name">Rain Radar</h3>
+                        <p>Радар осадков</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="tool-card">
+                <a href="https://www.meteoblue.com/" target="_blank">
+                    <img src="{% static 'main/images/toolimgs/meteoblue3-round-corners.png' %}" alt="Meteoblue">
+                    <div class="tool-info">
+                        <h3 class="tool-name">Meteoblue</h3>
+                        <p>Многомодельные прогнозы</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'main/js/main.js' %}"></script>
+{% endblock %}
