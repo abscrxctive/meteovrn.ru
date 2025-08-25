@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Страница не найдена — MeteoVRN</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to top, #1e3c72, #2a5298);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+    h1 {
+      font-size: 5rem;
+      margin: 0;
+    }
+    p {
+      font-size: 1.2rem;
+      margin: 10px 0 20px;
+    }
+    .search-box {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    input[type="text"] {
+      padding: 10px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px 0 0 8px;
+      outline: none;
+      width: 250px;
+    }
+    @media (max-width: 370px) {
+        input[type="text"] {
+      width: 180px;
+    }
+    }
+    button {
+      padding: 10px 15px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 0 8px 8px 0;
+      cursor: pointer;
+      background: #ffcc00;
+      color: #000;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #ffdb4d;
+    }
+    .fact-box {
+      margin-top: 20px;
+      margin: 10px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 15px 20px;
+      border-radius: 12px;
+      font-size: 1rem;
+      max-width: 400px;
+    }
+
+    /* CSS-облака */
+    .cloud {
+      position: absolute;
+      background: #fff;
+      border-radius: 50%;
+      opacity: 0.25;
+      animation: float linear infinite;
+    }
+    .cloud::before,
+    .cloud::after {
+      content: '';
+      position: absolute;
+      background: #fff;
+      border-radius: 50%;
+    }
+
+    .cloud1 {
+      width: 120px; height: 60px; top: 20%; left: -200px;
+      animation-duration: 60s;
+    }
+    .cloud1::before { width: 60px; height: 60px; left: -30px; top: -10px; }
+    .cloud1::after { width: 80px; height: 80px; left: 50px; top: -20px; }
+
+    .cloud2 {
+      width: 160px; height: 80px; top: 40%; left: -300px;
+      animation-duration: 90s;
+    }
+    .cloud2::before { width: 70px; height: 70px; left: -35px; top: -15px; }
+    .cloud2::after { width: 90px; height: 90px; left: 60px; top: -25px; }
+
+    .cloud3 {
+      width: 100px; height: 50px; top: 65%; left: -150px;
+      animation-duration: 45s;
+    }
+    .cloud3::before { width: 50px; height: 50px; left: -25px; top: -10px; }
+    .cloud3::after { width: 60px; height: 60px; left: 40px; top: -15px; }
+
+    /* Дополнительные облака */
+    .cloud4 {
+      width: 200px; height: 100px; top: 30%; left: -400px;
+      animation-duration: 120s;
+      opacity: 0.2;
+    }
+    .cloud4::before { width: 90px; height: 90px; left: -45px; top: -20px; }
+    .cloud4::after { width: 110px; height: 110px; left: 80px; top: -30px; }
+
+    .cloud5 {
+      width: 140px; height: 70px; top: 55%; left: -250px;
+      animation-duration: 75s;
+      opacity: 0.3;
+    }
+    .cloud5::before { width: 65px; height: 65px; left: -30px; top: -12px; }
+    .cloud5::after { width: 85px; height: 85px; left: 55px; top: -18px; }
+
+    @keyframes float {
+      from { transform: translateX(0); }
+      to   { transform: translateX(120vw); }
+    }
+  </style>
+</head>
+<body>
+  <div class="cloud cloud1"></div>
+  <div class="cloud cloud2"></div>
+  <div class="cloud cloud3"></div>
+  <div class="cloud cloud4"></div>
+  <div class="cloud cloud5"></div>
+
+  <h1>404</h1>
+  <p>Упс! Такой страницы не существует.</p>
+
+  <form action="https://www.google.com/search" method="get" target="_blank" class="search-box">
+    <input type="hidden" name="sitesearch" value="meteovrn.ru">
+    <input type="text" name="q" placeholder="Поиск по сайту...">
+    <button type="submit">Искать</button>
+  </form>
+
+  <div class="fact-box" id="fact"></div>
+
+  <script>
+    const facts = [
+      "1 световой год равен 9.46 триллиона километров.",
+      "Высота грозовых кучево-дождевых облаков может достигать 20 км.",
+      "На Юпитере бушует Большое Красное Пятно — ураган больше Земли.",
+      "Молния нагревает воздух до 30 000 °C — горячее поверхности Солнца.",
+      "Полярное сияние возникает из-за взаимодействия солнечного ветра с атмосферой Земли.",
+      "Самый сильный зарегистрированный ураган имел скорость ветра более 300 км/ч.",
+      "У Венеры день длится дольше, чем год.",
+      "Скорость вращения Земли постепенно замедляется — сутки удлиняются на 2 мс каждые 100 лет.",
+      "Свет от Солнца до Земли доходит за 8 минут и 8 секунд",
+      "Самая ближайшая Галактика к Млечному Пути — Андромеда (М31). Расстояние около 2,5 миллионов световых лет",
+      "По разным оценкам учёных, жизнь на Земле появилась около 3-4 млрд лет назад.",
+      "Молнии могут иметь как положительный, так и отрицательный заряд.",
+      "Солнечная система имеет диаметр около 2 световых лет.",
+      "Основателем Метеорологии считается Аристотель, а Астрономии — Гиппарх",
+      "Самым «экстремальным» торнадо в истории наблюдений стал Торнадо в Гуине в 1974 году",
+      "Самым смертоносным торнадо в мировой истории стал торнадо в Даулатпуре и Сатурии в Бангладеш 26 апреля 1989 года, унёсший жизни примерно 1300 человек.",
+      "Диаметр самой крупной градины за всю историю наблюдений составлил 20.3 см, а вес — почти 880 граммов.",
+      "Самая низкая температура воздуха в мире была зарегистрирована 3 августа 2004 года на антарктической станции «Купол Фудзи» — минус 91,2 °C.",
+      "Самая высокая температура воздуха в мире была зафиксирована 13 сентября 1922 года в Ливийской пустыне — +58 °C."
+    ];
+
+    const factBox = document.getElementById("fact");
+    factBox.textContent = facts[Math.floor(Math.random() * facts.length)];
+  </script>
+</body>
+</html>
