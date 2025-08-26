@@ -69,40 +69,42 @@
 
     /* CSS-облака */
     .cloud {
-      position: absolute;
-      background: #fff;
-      border-radius: 50%;
-      opacity: 0.25;
-      animation: float linear infinite;
-    }
-    .cloud::before,
-    .cloud::after {
-      content: '';
-      position: absolute;
-      background: #fff;
-      border-radius: 50%;
-    }
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.7;
+    filter: blur(1px);
+    animation: float linear infinite;
+  }
+
+  .cloud::before,
+  .cloud::after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+  }
 
     .cloud1 {
-      width: 120px; height: 60px; top: 20%; left: -200px;
+      width: 130px; height: 65px; top: 20%; left: -200px;
       animation-duration: 60s;
     }
-    .cloud1::before { width: 60px; height: 60px; left: -30px; top: -10px; }
-    .cloud1::after { width: 80px; height: 80px; left: 50px; top: -20px; }
+    .cloud1::before { width: 67px; height: 67px; left: -2px; top: -10px; }
+    .cloud1::after { width: 81px; height: 81px; left: 54px; top: -23px; }
 
     .cloud2 {
       width: 160px; height: 80px; top: 40%; left: -300px;
       animation-duration: 90s;
     }
-    .cloud2::before { width: 70px; height: 70px; left: -35px; top: -15px; }
-    .cloud2::after { width: 90px; height: 90px; left: 60px; top: -25px; }
+    .cloud2::before { width: 85px; height: 85px; left: -3px; top: -15px; }
+    .cloud2::after { width: 97px; height: 97px; left: 68px; top: -25px; }
 
     .cloud3 {
       width: 100px; height: 50px; top: 65%; left: -150px;
       animation-duration: 45s;
     }
-    .cloud3::before { width: 50px; height: 50px; left: -25px; top: -10px; }
-    .cloud3::after { width: 60px; height: 60px; left: 40px; top: -15px; }
+    .cloud3::before { width: 53px; height: 53px; left: -2px; top: -10px; }
+    .cloud3::after { width: 65px; height: 65px; left: 40px; top: -20px; }
 
     /* Дополнительные облака */
     .cloud4 {
@@ -110,16 +112,16 @@
       animation-duration: 120s;
       opacity: 0.2;
     }
-    .cloud4::before { width: 90px; height: 90px; left: -45px; top: -20px; }
-    .cloud4::after { width: 110px; height: 110px; left: 80px; top: -30px; }
+    .cloud4::before { width: 113px; height: 113px; left: -4px; top: -22px; }
+    .cloud4::after { width: 120px; height: 120px; left: 92px; top: -35px; }
 
     .cloud5 {
       width: 140px; height: 70px; top: 55%; left: -250px;
       animation-duration: 75s;
       opacity: 0.3;
     }
-    .cloud5::before { width: 65px; height: 65px; left: -30px; top: -12px; }
-    .cloud5::after { width: 85px; height: 85px; left: 55px; top: -18px; }
+    .cloud5::before { width: 75px; height: 75px; left: -2px; top: -12px; }
+    .cloud5::after { width: 86px; height: 86px; left: 57.5px; top: -21.3px; }
 
     @keyframes float {
       from { transform: translateX(0); }
