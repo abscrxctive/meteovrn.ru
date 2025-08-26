@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ошибка 500 — MeteoVrn</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 6rem;
+      margin: 0;
+      background: linear-gradient(45deg, #ffcc00, #ff6f61);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.05); opacity: 0.9; }
+    }
+
+    p {
+      font-size: 1.3rem;
+      margin: 15px 0 30px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      border: none;
+      background: #ffcc00;
+      color: #000;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .btn:hover {
+      background: #ffdb4d;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+
+    .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 200%;
+      height: 150px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 100% 50%;
+      animation: wave 8s infinite linear;
+    }
+
+    .wave:nth-child(2) {
+      bottom: 10px;
+      animation-duration: 10s;
+      opacity: 0.5;
+    }
+
+    .wave:nth-child(3) {
+      bottom: 20px;
+      animation-duration: 12s;
+      opacity: 0.3;
+    }
+
+    @keyframes wave {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+  </style>
+</head>
+<body>
+  <h1>500</h1>
+  <p>Упс! На сервере произошла ошибка.<br>Мы уже работаем над её устранением.</p>
+  <a href="/" class="btn">Вернуться на главную</a>
+
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+</body>
+</html>
